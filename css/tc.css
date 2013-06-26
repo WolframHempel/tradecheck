@@ -1,0 +1,25 @@
+#input{
+	width: 100%;
+	margin-top: 20px;
+}
+
+#output, .alert{
+	display: none;
+}
+dd{
+	width: 120px;
+	float: left;
+	clear: left;
+	font-weight: bold;
+}
+
+dt{
+	float: left;
+	font-weight: normal;
+}
+
+h4 {
+	font-size: 16px;
+	margin: 20px 0 0;
+	border-bottom: 1px solid #ccc;
+}
