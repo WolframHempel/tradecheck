@@ -49,9 +49,7 @@ $(function(){
 
 			fAddNode( mData, eRootNode );
 
-			var $output = $OutputTemplate.clone();
-			$output.prependTo($Outputs);
-			$output.html( oTemplate( mData ) ).show();
+			$Outputs.prepend(oTemplate( mData ));
 
 			$(".alert-success").show();
 		}
