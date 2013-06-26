@@ -6,11 +6,17 @@
 .output {
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 2em;
+
+}
+
+#templates {
+	display: none;
 }
 
 .output, .alert{
 	display: none;
 }
+
 dd{
 	width: 120px;
 	float: left;

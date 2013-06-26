@@ -4,7 +4,7 @@ $(function(){
 
 	var $Input = $('#input');
 	var $Outputs = $('#outputs');
-	var $OutputTemplate = $('.output');
+	var $OutputTemplate = $('#templates');
 	var oTemplate = Handlebars.compile( $OutputTemplate.html() );
 
 	var fAddNode = function( mRoot, eNode )
@@ -50,6 +50,7 @@ $(function(){
 			fAddNode( mData, eRootNode );
 
 			$Outputs.prepend(oTemplate( mData ));
+			$('.output').slideDown();
 
 			$(".alert-success").show();
 		}
