@@ -3,7 +3,12 @@
 	margin-top: 20px;
 }
 
-#output, .alert{
+.output {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 2em;
+}
+
+.output, .alert{
 	display: none;
 }
 dd{

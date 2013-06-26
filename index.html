@@ -14,73 +14,77 @@
     	<div class="alert alert-success">XML succesfully parsed</div>
     	<div class="alert alert-error">Invalid XML</div>
     	<hr />
-    	<div id="output">
-    		<div class="row">
-    			<h4>General Info</h4>
-    			<div class="span4">
-    				<dl>
-    					<dd>RET ID</dd>
-    					<dt>{{ret_id}}</dt>
-	    			</dl>
-	    			<dl>
-    					<dd>Deal time</dd>
-    					<dt>{{date deal_date}}, {{deal_time}}</dt>
-	    			</dl>
+    	<div id="outputs">
+		</div>
+		<div id="templates">
+			<div class="output">
+	    		<div class="row">
+	    			<h4>General Info</h4>
+	    			<div class="span4">
+	    				<dl>
+	    					<dd>RET ID</dd>
+	    					<dt>{{ret_id}}</dt>
+		    			</dl>
+		    			<dl>
+	    					<dd>Deal time</dd>
+	    					<dt>{{date deal_date}}, {{deal_time}}</dt>
+		    			</dl>
+		    		</div>
+		    		<div class="span4">
+	    				<dl>
+	    					<dd>Order ID</dd>
+	    					<dt>{{order_id}}</dt>
+		    			</dl>
+		    		</div>
+		    		<div class="span4">
+	    				<dl>
+	    					<dd>Maker</dd>
+	    					<dt>{{maker_name}}</dt>
+		    			</dl>
+		    			<dl>
+	    					<dd>Taker</dd>
+	    					<dt>{{taker_name}}</dt>
+		    			</dl>
+		    		</div>
 	    		</div>
-	    		<div class="span4">
-    				<dl>
-    					<dd>Order ID</dd>
-    					<dt>{{order_id}}</dt>
-	    			</dl>
-	    		</div>
-	    		<div class="span4">
-    				<dl>
-    					<dd>Maker</dd>
-    					<dt>{{maker_name}}</dt>
-	    			</dl>
-	    			<dl>
-    					<dd>Taker</dd>
-    					<dt>{{taker_name}}</dt>
-	    			</dl>
-	    		</div>
-    		</div>
-    		<div class="row">
-				<h4>Trade</h4>
-				<div class="span4">
-					<dl>
-						<dd>Currency Pair</dd>
-						<dt>{{fx_deal.base_currency}}/{{fx_deal.terms_currency}}</dt>
-					</dl>
-					<dl>
-						<dd>Maturity date</dd>
-						<dt>{{date fx_deal.fx_leg.maturity_date}}</dt>
-					</dl>
-				</div>
-				<div class="span4">
-					<dl>
-						<dd>Amount</dd>
-						<dt>{{amount fx_deal.fx_leg.net_dealt_amount}} {{fx_deal.fx_leg.net_dealt_currency}}</dt>
-					</dl>
-					<dl>
-						<dd>Counteramount</dd>
-						<dt>{{amount fx_deal.fx_leg.net_contra_amount}} {{counterCurrency fx_deal}}</dt>
-					</dl>
-				</div>
-				<div class="span4">
-					<dl>
-						<dd>Spot Rate</dd>
-						<dt>{{fx_deal.fx_leg.quote.spot_price}}</dt>
-					</dl>
-					<dl>
-						<dd>Forward points</dd>
-						<dt>{{fx_deal.fx_leg.quote.fwd_pts}}</dt>
-					</dl>
-					<dl>
-						<dd>All in rate</dd>
-						<dt>{{fx_deal.fx_leg.quote.all_in}}</dt>
-					</dl>
+	    		<div class="row">
+					<h4>Trade</h4>
+					<div class="span4">
+						<dl>
+							<dd>Currency Pair</dd>
+							<dt>{{fx_deal.base_currency}}/{{fx_deal.terms_currency}}</dt>
+						</dl>
+						<dl>
+							<dd>Maturity date</dd>
+							<dt>{{date fx_deal.fx_leg.maturity_date}}</dt>
+						</dl>
+					</div>
+					<div class="span4">
+						<dl>
+							<dd>Amount</dd>
+							<dt>{{amount fx_deal.fx_leg.net_dealt_amount}} {{fx_deal.fx_leg.net_dealt_currency}}</dt>
+						</dl>
+						<dl>
+							<dd>Counteramount</dd>
+							<dt>{{amount fx_deal.fx_leg.net_contra_amount}} {{counterCurrency fx_deal}}</dt>
+						</dl>
+					</div>
+					<div class="span4">
+						<dl>
+							<dd>Spot Rate</dd>
+							<dt>{{fx_deal.fx_leg.quote.spot_price}}</dt>
+						</dl>
+						<dl>
+							<dd>Forward points</dd>
+							<dt>{{fx_deal.fx_leg.quote.fwd_pts}}</dt>
+						</dl>
+						<dl>
+							<dd>All in rate</dd>
+							<dt>{{fx_deal.fx_leg.quote.all_in}}</dt>
+						</dl>
+					</div>
 				</div>
 			</div>
-    	</div>
+		</div>
   </body>
 </html>
